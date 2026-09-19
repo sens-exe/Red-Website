@@ -160,7 +160,14 @@ body::before {
 .status-line { height: 1px; background: var(--border); margin: 13px 0 20px; }
 .status-card p { margin: 0; text-align: center; color: #aeb4c1; font-size: 11px; }
 
-.socials { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 20px; }
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  width: 100%;
+}
 .socials a { display: grid; place-items: center; aspect-ratio: 1; border-radius: 12px; text-decoration: none; color: #f4f7fb; background: linear-gradient(145deg, #394452, #202935); border: 1px solid rgba(255,255,255,.13); font-weight: 800; font-size: 22px; transition: .2s ease; }
 .socials a:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 0 18px rgba(39,169,255,.2); }
 

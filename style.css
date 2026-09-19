@@ -122,3 +122,24 @@ footer { position: fixed; right: 18px; top: 18px; color: rgba(255,255,255,.5); f
   .volume-control { right: 10px; bottom: 145px; }
   footer { position: static; text-align: center; padding: 0 0 15px; }
 }
+
+.avatar-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #ff2d55, #ff003c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Manage Profile</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="admin"><div class="admin-top"><div><div class="section-label">CONTROL CENTER</div><h1>Manage your space.</h1><p>Edit your profile and social links. Changes are saved in this browser.</p></div><a class="btn btn-ghost" href="index.html">View page</a></div>
+<form id="form" class="admin-card">
+<h2>Profile details</h2>
+<label>Name<input name="name" required></label><label>Handle<input name="handle" required></label><label>Avatar letter<input name="avatar" maxlength="2" required></label><label>Profile bio<textarea name="bio" rows="2"></textarea></label><label>About text<textarea name="about" rows="3"></textarea></label><label>Quote<textarea name="quote" rows="2"></textarea></label><label>Tags <small>comma separated</small><input name="tags"></label>
+<h2>Hero section</h2><label>Hero title<textarea name="heroTitle" rows="2"></textarea></label><label>Hero description<textarea name="heroDescription" rows="2"></textarea></label>
+<h2>Music</h2><label>Song title<input name="songTitle"></label><label>Artist<input name="songArtist"></label><label>Direct MP3 URL<input name="audioUrl" type="url"></label>
+<h2>Profile image</h2><label>Upload image<input id="imageUpload" type="file" accept="image/*"></label><button type="button" id="removeImage" class="btn btn-ghost">Remove image</button>
+<h2>Social links</h2><div id="socials"></div><button type="button" id="add" class="btn btn-ghost">+ Add link</button>
+<div class="admin-actions"><button class="btn btn-main" type="submit">Save changes</button><button class="btn danger" id="reset" type="button">Reset</button><span id="message"></span></div>
+</form></main><script src="admin.js"></script></body></html>

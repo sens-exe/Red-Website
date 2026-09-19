@@ -344,3 +344,23 @@ footer { position: fixed; right: 18px; top: 18px; color: rgba(255,255,255,.5); f
 .profile-card .music-player {
   width: 100%;
 }
+  /* FORCE CENTER PROFILE CONTENT */
+
+.profile-card h1,
+.profile-card .handle,
+.profile-card .badges,
+.profile-card .motto {
+  width: 100% !important;
+  text-align: center !important;
+  align-self: center !important;
+}
+
+.profile-card h1 {
+  color: #f5f7fb !important;
+  margin: 0 !important;
+  position: static !important;
+}
+
+.profile-card .handle {
+  margin: 8px 0 12px !important;
+}

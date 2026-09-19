@@ -41,3 +41,58 @@ progress.addEventListener('input', () => {
 volume.addEventListener('input', () => { audio.volume = Number(volume.value); });
 audio.volume = Number(volume.value);
 
+const DISCORD_ID = "445372100946165761";
+
+async function updateDiscordStatus() {
+  try {
+    const response = await fetch(
+      `https://api.lanyard.rest/v1/users/${DISCORD_ID}`
+    );
+
+    const result = await response.json();
+    const data = result.data;
+
+    const name = document.getElementById("discord-name");
+    const activityText = document.getElementById("discord-activity");
+    const statusText = document.getElementById("discord-status");
+    const dot = document.getElementById("discord-dot");
+
+    const statusNames = {
+      online: "Online",
+      idle: "Idle",
+      dnd: "Do Not Disturb",
+      offline: "Offline"
+    };
+
+    const status = data.discord_status || "offline";
+
+    name.textContent = data.discord_user.global_name ||
+      data.discord_user.username;
+
+    statusText.textContent = statusNames[status] || "Offline";
+
+    dot.style.background =
+      status === "online" ? "#43b581" :
+      status === "idle" ? "#faa61a" :
+      status === "dnd" ? "#f04747" :
+      "#747f8d";
+
+    const game = data.activities.find(
+      activity => activity.type === 0
+    );
+
+    if (game) {
+      activityText.textContent =
+        `${game.name}${game.details ? " • " + game.details : ""}`;
+    } else {
+      activityText.textContent = "No active game";
+    }
+
+  } catch (error) {
+    console.error("Discord status error:", error);
+  }
+}
+
+updateDiscordStatus();
+
+setInterval(updateDiscordStatus, 15000);

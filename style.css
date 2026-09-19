@@ -183,10 +183,11 @@ body::before {
   transition: .2s ease;
 }
 .discord-icon {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   display: block;
   color: #ff3155;
+  transform: translateY(2px);
 }
 .socials a:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 0 18px rgba(39,169,255,.2); }
 

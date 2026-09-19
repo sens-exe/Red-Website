@@ -62,23 +62,26 @@ body::before {
 }
 
 .avatar-ring {
-  width: 144px;
-  height: 144px;
-  margin: 0 auto 15px;
-  padding: 8px;
+  width: 120px;
+  height: 120px;
+  padding: 4px;
   border-radius: 50%;
-  background: conic-gradient(from 25deg, #253244, #8ba5bd, #243244, #253244);
-  box-shadow: 0 0 0 8px rgba(125, 158, 184, .07), 0 0 35px rgba(95, 152, 202, .18);
+  background: linear-gradient(135deg, #ff2d55, #ff9c3c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+
 .avatar {
+  width: 100%;
   height: 100%;
-  display: grid;
-  place-items: center;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 25%, #5c6b7e, #171f2c 60%, #080e18);
-  border: 2px solid rgba(255,255,255,.12);
-  font-size: 58px;
-  font-weight: 800;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
 }
 
 h1 { margin: 0; font-size: 39px; letter-spacing: .5px; }

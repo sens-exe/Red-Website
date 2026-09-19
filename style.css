@@ -231,4 +231,27 @@ footer { position: fixed; right: 18px; top: 18px; color: rgba(255,255,255,.5); f
   object-fit: cover;
   display: block;
 }
+  /* Discord avatar - fixed size */
+.status-card .mini-avatar {
+  width: 43px !important;
+  height: 43px !important;
+  min-width: 43px !important;
+  min-height: 43px !important;
+  max-width: 43px !important;
+  max-height: 43px !important;
+  flex: 0 0 43px !important;
+  overflow: hidden !important;
+  border-radius: 13px !important;
+  position: relative;
 }
+
+.status-card .mini-avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 13px !important;
+}
+

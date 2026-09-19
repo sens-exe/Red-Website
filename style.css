@@ -56,17 +56,21 @@ body::before {
 }
 
 .profile-card {
+  width: 310px;
+  max-width: calc(100vw - 32px);
+  padding: 30px 18px 18px;
   border: 1px solid rgba(255, 55, 85, 0.65);
-
+  border-radius: 22px;
   background: rgba(20, 10, 18, 0.78);
-
   box-shadow:
     0 0 25px rgba(255, 35, 65, 0.12),
     inset 0 0 30px rgba(255, 35, 65, 0.04);
-
-  border-radius: 22px;
   backdrop-filter: blur(18px);
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .avatar-ring {
@@ -92,11 +96,51 @@ body::before {
   display: block;
 }
 
-h1 { margin: 0; font-size: 39px; letter-spacing: .5px; }
-.handle { margin: 2px 0 12px; color: var(--accent); font-weight: 700; }
-.badges { display: flex; justify-content: center; gap: 8px; margin-bottom: 19px; }
-.badges span { display: grid; place-items: center; width: 39px; height: 39px; border-radius: 50%; background: #263246; border: 1px solid var(--border); color: #eaf5ff; }
-.motto { color: #ff5a67; text-shadow: 0 0 14px rgba(255, 50, 70, .5); margin: 0 0 26px; font-weight: 600; }
+.profile-card h1 {
+  width: 100%;
+  margin: 8px 0 2px;
+  text-align: center;
+  color: #f5f7fb;
+  font-size: 39px;
+  letter-spacing: .5px;
+}
+
+.profile-card .handle {
+  width: 100%;
+  margin: 0 0 12px;
+  text-align: center;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.profile-card .badges {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 19px;
+}
+
+.profile-card .badges span {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background: #263246;
+  border: 1px solid var(--border);
+  color: #eaf5ff;
+}
+
+.profile-card .motto {
+  width: 100%;
+  margin: 0 0 26px;
+  text-align: center;
+  color: #ff5a67;
+  text-shadow: 0 0 14px rgba(255, 50, 70, .5);
+  font-weight: 600;
+}
 
 .status-card { text-align: left; padding: 14px; border-radius: 16px; background: rgba(25, 29, 34, .92); border: 1px solid var(--border); }
 .status-top { display: flex; align-items: center; gap: 10px; }

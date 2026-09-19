@@ -153,60 +153,55 @@ footer { position: fixed; right: 18px; top: 18px; color: rgba(255,255,255,.5); f
     object-position: center;
     display: block;
 }
-  /* FIX MUSIC PLAYER LAYOUT */
+/* FINAL MUSIC PLAYER ALIGNMENT */
 .music-player {
-  position: fixed;
-  left: 50%;
-  bottom: 18px;
-  transform: translateX(-50%);
-  width: min(465px, calc(100% - 36px));
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 86px 1fr;
-  gap: 14px;
-  padding: 14px;
-  align-items: center;
+  display: grid !important;
+  grid-template-columns: 86px minmax(0, 1fr) !important;
+  gap: 12px !important;
+  align-items: center !important;
 }
 
-/* Center record */
-.record {
-  width: 86px;
-  height: 86px;
-  justify-self: center;
+/* Record sa kaliwa */
+.music-player .record {
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  width: 86px !important;
+  height: 86px !important;
+  justify-self: center !important;
 }
 
-/* Track information */
-.track-info {
-  min-width: 0;
+/* Title sa kanan */
+.music-player .track-info {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  min-width: 0 !important;
 }
 
-/* Controls below */
-.controls {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
+/* Progress sa kanan */
+.music-player .progress-row {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+}
+
+/* Controls sa ibaba, centered */
+.music-player .controls {
+  grid-column: 1 / -1 !important;
+  grid-row: 3 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 22px !important;
 }
 
 /* Mobile */
 @media (max-width: 620px) {
   .music-player {
-    left: 10px;
-    bottom: 10px;
-    transform: none;
-    width: calc(100% - 20px);
-    grid-template-columns: 70px 1fr;
-    gap: 10px;
-    padding: 12px;
+    grid-template-columns: 70px minmax(0, 1fr) !important;
   }
 
-  .record {
-    width: 70px;
-    height: 70px;
+  .music-player .record {
+    width: 70px !important;
+    height: 70px !important;
   }
-
-  .controls {
-    grid-column: 1 / -1;
-  }
+}
 }

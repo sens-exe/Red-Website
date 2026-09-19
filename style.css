@@ -466,3 +466,12 @@ footer { position: fixed; right: 18px; top: 18px; color: rgba(255,255,255,.5); f
   margin-left: auto !important;
   margin-right: auto !important;
 }
+.discord-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  color: #ff3155;
+}
+  .socials a:hover .discord-icon {
+  color: #ffffff;
+}

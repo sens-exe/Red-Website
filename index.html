@@ -60,23 +60,85 @@
     </section>
 
     <section class="music-player" aria-label="Music player">
-      <div class="record"><span></span></div>
-      <div class="track-info">
+
+  <div class="music-cover">
+    <img src="red.png" alt="Yk album cover">
+  </div>
+
+  <div class="music-main">
+
+    <div class="music-heading">
+      <div>
         <h2>Yk</h2>
         <p>Sean Jr.</p>
-        <div class="progress-row">
-          <span id="currentTime">0:00</span>
-          <input id="progress" type="range" min="0" max="100" value="0" aria-label="Song progress" />
-          <span id="duration">0:00</span>
-        </div>
       </div>
-      <div class="controls">
-        <button id="previous" aria-label="Previous track">|‹</button>
-        <button id="playButton" class="play" aria-label="Play music">▶</button>
-        <button id="next" aria-label="Next track">›|</button>
-      </div>
-      <audio id="audio" src="ykyk.mp3" preload="auto"></audio>
-    </section>
+
+      <button class="music-heart" aria-label="Favorite">♡</button>
+    </div>
+
+    <div class="waveform" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="progress-row">
+      <span id="currentTime">0:00</span>
+
+      <input
+        id="progress"
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+        aria-label="Song progress"
+      />
+
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="music-controls">
+
+      <button id="previous" aria-label="Previous track">
+        |‹
+      </button>
+
+      <button id="playButton" class="play" aria-label="Play music">
+        ▶
+      </button>
+
+      <button id="next" aria-label="Next track">
+        ›|
+      </button>
+
+    </div>
+
+  </div>
+
+  <audio
+    id="audio"
+    src="ykyk.mp3"
+    preload="auto">
+  </audio>
+
+</section>
   </main>
 
   <div class="volume-control">

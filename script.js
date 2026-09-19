@@ -32,3 +32,12 @@ progress.addEventListener('input', () => {
 });
 volume.addEventListener('input', () => { audio.volume = Number(volume.value); });
 audio.volume = Number(volume.value);
+const music = document.getElementById("music");
+
+music.volume = 0.3;
+
+document.addEventListener("click", () => {
+  music.play().catch(error => {
+    console.log("Music playback blocked:", error);
+  });
+}, { once: true });

@@ -305,3 +305,42 @@ footer { position: fixed; right: 18px; top: 18px; color: rgba(255,255,255,.5); f
   object-fit: cover !important;
   border-radius: 13px !important;
 }
+/* FINAL ALIGNMENT FIX */
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.profile-card h1 {
+  margin: 0;
+  color: #f5f7fb;
+  text-align: center;
+}
+
+.profile-card .handle {
+  text-align: center;
+}
+
+.profile-card .badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card .motto {
+  text-align: center;
+  width: 100%;
+}
+
+.profile-card .status-card {
+  width: 100%;
+  text-align: left;
+}
+
+.profile-card .music-player {
+  width: 100%;
+}

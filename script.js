@@ -53,6 +53,11 @@ async function updateDiscordStatus() {
     const data = result.data;
 
     const name = document.getElementById("discord-name");
+    const avatar = document.getElementById("discord-avatar");
+
+if (data.discord_user.avatar) {
+  avatar.src = `https://cdn.discordapp.com/avatars/${data.discord_user.id}/${data.discord_user.avatar}.png?size=128`;
+}
     const activityText = document.getElementById("discord-activity");
     const statusText = document.getElementById("discord-status");
     const dot = document.getElementById("discord-dot");

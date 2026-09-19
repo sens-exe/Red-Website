@@ -711,4 +711,250 @@ footer { position: fixed; right: 18px; top: 18px; color: rgba(255,255,255,.5); f
     width: 48px !important;
     height: 48px !important;
   }
+  /* ===== FINAL MUSIC PLAYER DESIGN ===== */
+
+.music-player {
+  position: fixed !important;
+  left: 50% !important;
+  bottom: 22px !important;
+  transform: translateX(-50%) !important;
+
+  width: min(900px, calc(100% - 40px)) !important;
+  min-height: 210px;
+
+  display: grid !important;
+  grid-template-columns: 180px 1fr !important;
+  gap: 24px !important;
+
+  padding: 22px !important;
+  box-sizing: border-box !important;
+
+  border: 1px solid rgba(255, 49, 85, 0.55) !important;
+  border-radius: 22px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(30, 10, 18, 0.94),
+      rgba(12, 8, 14, 0.90)
+    ) !important;
+
+  backdrop-filter: blur(18px) !important;
+
+  box-shadow:
+    0 0 30px rgba(255, 49, 85, 0.12),
+    inset 0 0 30px rgba(255, 49, 85, 0.03) !important;
+}
+
+
+/* ===== ALBUM COVER ===== */
+
+.music-cover {
+  width: 180px !important;
+  height: 180px !important;
+
+  overflow: hidden !important;
+  border-radius: 18px !important;
+
+  border: 1px solid rgba(255, 49, 85, 0.35) !important;
+
+  box-shadow:
+    0 0 20px rgba(255, 49, 85, 0.12) !important;
+}
+
+.music-cover img {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block !important;
+  object-fit: cover !important;
+}
+
+
+/* ===== MUSIC CONTENT ===== */
+
+.music-main {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* ===== TITLE ===== */
+
+.music-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.music-heading h2 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: 28px !important;
+}
+
+.music-heading p {
+  margin: 5px 0 0 !important;
+  color: rgba(255,255,255,.55) !important;
+  font-size: 14px !important;
+}
+
+
+/* ===== HEART ===== */
+
+.music-heart {
+  color: #ff3155 !important;
+  font-size: 30px !important;
+}
+
+
+/* ===== WAVEFORM ===== */
+
+.waveform {
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+  margin: 18px 0;
+}
+
+.waveform span {
+  width: 4px;
+  height: 18px;
+
+  border-radius: 4px;
+
+  background: #ff3155;
+
+  box-shadow:
+    0 0 8px rgba(255,49,85,.35);
+}
+
+.waveform span:nth-child(2),
+.waveform span:nth-child(9),
+.waveform span:nth-child(16) {
+  height: 32px;
+}
+
+.waveform span:nth-child(3),
+.waveform span:nth-child(7),
+.waveform span:nth-child(12),
+.waveform span:nth-child(18) {
+  height: 45px;
+}
+
+.waveform span:nth-child(4),
+.waveform span:nth-child(10),
+.waveform span:nth-child(15) {
+  height: 26px;
+}
+
+
+/* ===== PROGRESS BAR ===== */
+
+.music-player .progress-row {
+  width: 100% !important;
+
+  display: grid !important;
+  grid-template-columns: 40px 1fr 40px !important;
+
+  align-items: center !important;
+
+  gap: 8px !important;
+}
+
+.music-player .progress-row span {
+  color: rgba(255,255,255,.55);
+}
+
+
+/* ===== CONTROLS ===== */
+
+.music-controls {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+
+  margin-top: 18px;
+}
+
+.music-controls button {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.music-controls .play {
+  width: 58px !important;
+  height: 58px !important;
+
+  border-radius: 50% !important;
+
+  background: #ff3155 !important;
+
+  box-shadow:
+    0 0 20px rgba(255,49,85,.35) !important;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 620px) {
+
+  .music-player {
+    width: calc(100% - 20px) !important;
+
+    min-height: auto;
+
+    grid-template-columns: 85px 1fr !important;
+
+    gap: 14px !important;
+
+    padding: 14px !important;
+
+    bottom: 10px !important;
+  }
+
+  .music-cover {
+    width: 85px !important;
+    height: 85px !important;
+  }
+
+  .music-heading h2 {
+    font-size: 20px !important;
+  }
+
+  .music-heading p {
+    font-size: 12px !important;
+  }
+
+  .waveform {
+    height: 32px;
+    margin: 8px 0;
+  }
+
+  .waveform span {
+    width: 3px;
+  }
+
+  .music-controls {
+    gap: 15px;
+    margin-top: 8px;
+  }
+
+  .music-controls .play {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+}
 }

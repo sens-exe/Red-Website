@@ -212,4 +212,11 @@ footer { position: fixed; right: 18px; top: 18px; color: rgba(255,255,255,.5); f
   .controls {
     grid-column: 1 / -1;
   }
+  .mini-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
 }

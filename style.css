@@ -145,8 +145,16 @@ body::before {
 .status-card { text-align: left; padding: 14px; border-radius: 16px; background: rgba(25, 29, 34, .92); border: 1px solid var(--border); }
 .status-top { display: flex; align-items: center; gap: 10px; }
 .mini-avatar { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 13px; background: linear-gradient(135deg, #e6b8c5, #6f4e7c); font-weight: 800; }
-.status-top strong { font-size: 14px; }
-.status-top small { display: block; color: var(--muted); margin-top: 3px; font-size: 11px; }
+.status-top strong {
+  font-size: 14px;
+  color: #ffffff;
+}
+.status-top small {
+  display: block;
+  color: #ffffff;
+  margin-top: 3px;
+  font-size: 11px;
+}
 .verified { color: #48d8cf; }
 .online-dot { width: 9px; height: 9px; margin-left: auto; border-radius: 50%; background: #ff4358; box-shadow: 0 0 10px #ff4358; }
 .status-line { height: 1px; background: var(--border); margin: 13px 0 20px; }

@@ -101,7 +101,12 @@ h1 { margin: 0; font-size: 39px; letter-spacing: .5px; }
 .socials a { display: grid; place-items: center; aspect-ratio: 1; border-radius: 12px; text-decoration: none; color: #f4f7fb; background: linear-gradient(145deg, #394452, #202935); border: 1px solid rgba(255,255,255,.13); font-weight: 800; font-size: 22px; transition: .2s ease; }
 .socials a:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 0 18px rgba(39,169,255,.2); }
 
-.music-player { position: fixed; left: 18px; bottom: 18px; width: min(465px, calc(100% - 36px)); display: grid; grid-template-columns: 92px 1fr; gap: 14px; padding: 18px; border: 1px solid var(--border); border-radius: 17px; background: rgba(13, 22, 35, .94); box-shadow: 0 18px 45px rgba(0,0,0,.4); backdrop-filter: blur(16px); }
+.music-player {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  width: min(465px, calc(100% - 36px));
 .record { width: 86px; height: 86px; display: grid; place-items: center; border-radius: 50%; background: repeating-radial-gradient(circle, #111 0 7px, #292929 8px 10px); border: 1px solid #505050; }
 .record span { width: 16px; height: 16px; border-radius: 50%; border: 2px solid #222; background: #050505; }
 .track-info h2 { margin: 0; font-size: 17px; }
@@ -118,7 +123,12 @@ footer { position: fixed; right: 18px; top: 18px; color: rgba(255,255,255,.5); f
 @media (max-width: 620px) {
   .page { padding-top: 28px; padding-bottom: 210px; }
   .profile-card { padding: 25px 16px 17px; }
-  .music-player { left: 10px; bottom: 10px; width: calc(100% - 20px); }
+  .music-player {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
   .volume-control { right: 10px; bottom: 145px; }
   footer { position: static; text-align: center; padding: 0 0 15px; }
 }
